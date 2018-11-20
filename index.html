@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>自定义vue</title>
+	</head>
+	<body>
+		<div id="name">
+			{{name}}
+		</div>
+		<script type="text/javascript" src="./myselfVue.js"></script>
+		<script type="text/javascript">
+		var ele = document.querySelector("#name");
+		var myVue = new MyVue({
+			ele: "#name",
+			data: {
+				name: "123",
+				title: "hehe"
+			}
+		})
+		setTimeout(function () {
+	        console.log('name值改变了');
+	        myVue.name = 'canfoo';
+	        myVue.title = '2aa';
+	    }, 2000);
+		</script>
+	</body>
+</html>
